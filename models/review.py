@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module contains Amenity class"""
+""" This module contains Review class"""
 from models.base_model import BaseModel
 
 

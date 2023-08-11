@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This module contains State class"""
+""" This module contains City class"""
 from models.base_model import BaseModel
 
 

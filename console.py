@@ -38,7 +38,8 @@ class HBNBCommand(cmd.Cmd):
             print(new_instance.id)
 
     def do_show(self, arg):
-        """Prints the string representation of an instance based on the class name and id."""
+        """Prints the string representation of an instance
+        based on the class name and id."""
         args = arg.split()
         if len(args) < 1:
             print("** class name missing **")
@@ -49,7 +50,8 @@ class HBNBCommand(cmd.Cmd):
         else:
             instance_found = False
             for instance in self.stored_objects:
-                if type(instance).__name__ == args[0] and instance.id == args[1]:
+                if (type(instance).__name__ == args[0] and
+                        instance.id == args[1]):
                     instance_found = True
                     print(str(instance))
             if not instance_found:
@@ -66,13 +68,15 @@ class HBNBCommand(cmd.Cmd):
             print("** instance id missing **")
         else:
             for i, instance in enumerate(self.stored_objects):
-                if type(instance).__name__ == args[0] and instance.id == args[1]:
+                if (type(instance).__name__ == args[0] and
+                        instance.id == args[1]):
                     del self.stored_objects[i]
                     return
             print("** no instance found **")
 
     def do_all(self, arg):
-        """Prints all string representation of all instances based or not on the class name."""
+        """Prints all string representation of all
+        instances based or not on the class name."""
         args = arg.split()
         if len(args) > 0:
             if args[0] not in self.available_classes:
@@ -100,7 +104,8 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
         else:
             for instance in self.stored_objects:
-                if type(instance).__name__ == args[0] and instance.id == args[1]:
+                if (type(instance).__name__ == args[0] and
+                        instance.id == args[1]):
                     setattr(instance, args[2], args[3])
                     return
             print("** no instance found **")

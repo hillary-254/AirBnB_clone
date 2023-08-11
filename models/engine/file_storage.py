@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ This module contains the FileStorage class"""
 import json
 from models.base_model import BaseModel
@@ -11,7 +12,8 @@ from models.state import State
 
 class FileStorage:
     """
-    Serializes instances to a JSON file and deserializes JSON file to instances.
+    Serializes instances to a JSON file and
+    deserializes JSON file to instances.
     """
     __file_path = "file.json"
     __objects = {}
@@ -49,7 +51,8 @@ class FileStorage:
             json.dump(obj_dict, f)
 
     def reload(self):
-        """Deserializes the JSON file to __objects (only if the JSON file (__file_path) exists)"""
+        """Deserializes the JSON file to __objects
+        (only if the JSON file (__file_path) exists)"""
         try:
             with open(self.__file_path, 'r', encoding='utf-8') as file:
                 json_data = file.read()
