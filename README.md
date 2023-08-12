@@ -29,4 +29,4 @@ This project is created and tested on Ubuntu 20.04 LTS
 3. Use the available commands to manage the objects.
 
 ---
-LAST UPDATED: ## AUG 2023
+LAST UPDATED: 12 AUG 2023
